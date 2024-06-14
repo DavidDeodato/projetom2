@@ -9,11 +9,14 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^6.1.2",
     "grunt": "1.0.4",
+    "mocha": "^10.4.0",
     "sails": "^1.5.9",
     "sails-hook-grunt": "^5.0.0",
     "sails-hook-orm": "^4.0.0",
     "sails-hook-sockets": "^3.0.0",
-    "sails-postgresql": "^5.0.1"
+    "sails-postgresql": "^5.0.1",
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "5.16.0"
