@@ -17,6 +17,8 @@ module.exports = {
       return res.serverError(err);
     }
   },
+
+
   create: async (req, res) => {
     try {
       const hero = await Hero.new(req.body).fetch();
@@ -26,3 +28,25 @@ module.exports = {
     }
   },
 };
+
+module.exports = {
+  create: async (req, res) => {
+    try {
+      const hero = await Hero.new(req.body).fetch();
+      return res.json(hero);
+    } catch (err) {
+      return res.serverError(err);
+    }
+  },
+}
+
+/*
+create: async (req, res) => {
+  try {
+    const { name, power, age, secretIdentity } = req.body;
+    const hero = await Hero.create({ name: name, power: power, age: age, secretIdentity: secretIdentity}).fetch();
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    return res.serverError(err);
+  }
+} */
